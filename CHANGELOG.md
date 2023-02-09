@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.1.0...v1.1.1) (2023-02-09)
+
+
+### Bug Fixes
+
+* fix defaultQueueURL typo ([427398e](https://github.com/uzenith360/aws-sqs-send-message/commit/427398ea75f6f5cf8f6e5278c38a2c96fdc2a9b7))
+
 # [1.1.0](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.0.1...v1.1.0) (2023-02-09)
 
 
