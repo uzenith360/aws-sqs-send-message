@@ -23,7 +23,7 @@ export default class AWSSQSSendMessage {
         );
     }
 
-    async generateSQSUploadUrl(message: string): Promise<void> {
+    async sendMessage(message: string): Promise<void> {
         await this.sqsClient.sendMessage({
             QueueUrl: this.queueURL,
             // Any message data we want to send
