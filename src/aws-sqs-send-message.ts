@@ -6,14 +6,14 @@ export default class AWSSQSSendMessage {
     private readonly sqsClient: SQS;
 
     private readonly awsRegion: string;
-    private readonly queueURL: string;
+    private readonly defaultQueueURL: string;
 
     private constructor(
         awsRegion: string,
-        queueURL: string,
+        deafultQueueURL: string,
     ) {
         this.awsRegion = awsRegion;
-        this.queueURL = queueURL;
+        this.defaultQueueURL = deafultQueueURL;
 
         this.sqsClient = new SQS(
             {
@@ -23,9 +23,9 @@ export default class AWSSQSSendMessage {
         );
     }
 
-    async sendMessage(message: string): Promise<void> {
+    async sendMessage(message: string, queueURL: string = this.defaultQueueURL): Promise<void> {
         await this.sqsClient.sendMessage({
-            QueueUrl: this.queueURL,
+            QueueUrl: queueURL,
             // Any message data we want to send
             MessageBody: message,
         }).promise();
@@ -33,12 +33,12 @@ export default class AWSSQSSendMessage {
 
     public static getInstance(
         awsRegion: string,
-        queueURL: string,
+        deafultQueueURL: string,
     ): AWSSQSSendMessage {
         if (!AWSSQSSendMessage._instance) {
             AWSSQSSendMessage._instance = new AWSSQSSendMessage(
                 awsRegion,
-                queueURL,
+                deafultQueueURL,
             );
         }
 
