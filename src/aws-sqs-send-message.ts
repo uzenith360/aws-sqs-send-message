@@ -10,10 +10,10 @@ export default class AWSSQSSendMessage {
 
     private constructor(
         awsRegion: string,
-        deafultQueueURL: string,
+        defaultQueueURL: string,
     ) {
         this.awsRegion = awsRegion;
-        this.defaultQueueURL = deafultQueueURL;
+        this.defaultQueueURL = defaultQueueURL;
 
         this.sqsClient = new SQS(
             {
@@ -33,12 +33,12 @@ export default class AWSSQSSendMessage {
 
     public static getInstance(
         awsRegion: string,
-        deafultQueueURL: string,
+        defaultQueueURL: string,
     ): AWSSQSSendMessage {
         if (!AWSSQSSendMessage._instance) {
             AWSSQSSendMessage._instance = new AWSSQSSendMessage(
                 awsRegion,
-                deafultQueueURL,
+                defaultQueueURL,
             );
         }
 
