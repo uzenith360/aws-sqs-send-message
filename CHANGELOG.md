@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.1.1...v1.2.0) (2023-02-20)
+
+
+### Features
+
+* add sendMessages to send messages in batch ([cab110c](https://github.com/uzenith360/aws-sqs-send-message/commit/cab110c5260a8faa374b87266774fdc4b8d30e5e))
+
 ## [1.1.1](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.1.0...v1.1.1) (2023-02-09)
 
 
