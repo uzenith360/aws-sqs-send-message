@@ -31,6 +31,21 @@ export default class AWSSQSSendMessage {
         }).promise();
     }
 
+    async sendMessages(messages: string[], queueURL: string = this.defaultQueueURL): Promise<void> {
+        await this.sqsClient.sendMessageBatch({
+            QueueUrl: queueURL,
+            Entries: messages.map(
+                (message: string, index: number) => (
+                    {
+                        Id: String(index),
+                        // Any message data we want to send
+                        MessageBody: message,
+                    }
+                ),
+            ),
+        }).promise();
+    }
+
     public static getInstance(
         awsRegion: string,
         defaultQueueURL: string,
