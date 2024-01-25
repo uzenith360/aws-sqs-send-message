@@ -1,1 +1,1 @@
-export * from "./aws-sqs-send-message";
+export { AWSSQSSendMessage } from "./aws-sqs-send-message";
