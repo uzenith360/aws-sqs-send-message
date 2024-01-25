@@ -5,6 +5,7 @@
             "ES2022",
             "DOM"
         ],
+        "isolatedModules": true,
         "target": "ES2022",
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
