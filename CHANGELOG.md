@@ -1,3 +1,14 @@
+# [1.3.0](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.2.0...v1.3.0) (2024-01-25)
+
+
+### Features
+
+* upgrade to aws v3 ([5d2800c](https://github.com/uzenith360/aws-sqs-send-message/commit/5d2800c65c469b0aa9982dac9af0c62267d9c1f0))
+* upgrade to aws v3 ([87e40ad](https://github.com/uzenith360/aws-sqs-send-message/commit/87e40ad8e00d5b83d01dbcd7c3b6b636345be989))
+* upgrade to aws v3 ([2fd8a65](https://github.com/uzenith360/aws-sqs-send-message/commit/2fd8a65c58ebd09ae157a993fca50878cc06de29))
+* upgrade to aws v3 ([4a2406f](https://github.com/uzenith360/aws-sqs-send-message/commit/4a2406faf811fe19ad5697e55eca1cfb0dae64cf))
+* upgrade to aws v3 ([87c3a5c](https://github.com/uzenith360/aws-sqs-send-message/commit/87c3a5c9a0627942efb7d2a12ac222ede8b899e4))
+
 # [1.2.0](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.1.1...v1.2.0) (2023-02-20)
 
 
