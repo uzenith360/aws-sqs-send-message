@@ -1,4 +1,4 @@
-import { SQS } from 'aws-sdk';
+import { SQS } from '@aws-sdk/client-sqs';
 
 export default class AWSSQSSendMessage {
     private static _instance: AWSSQSSendMessage;
@@ -15,12 +15,13 @@ export default class AWSSQSSendMessage {
         this.awsRegion = awsRegion;
         this.defaultQueueURL = defaultQueueURL;
 
-        this.sqsClient = new SQS(
-            {
-                apiVersion: 'latest',
-                region: this.awsRegion,
-            },
-        );
+        this.sqsClient = new SQS({
+            // The key apiVersion is no longer supported in v3, and can be removed.
+            // @deprecated The client uses the "latest" apiVersion.
+            apiVersion: 'latest',
+
+            region: this.awsRegion,
+        });
     }
 
     async sendMessage(message: string, queueURL: string = this.defaultQueueURL): Promise<void> {
@@ -28,7 +29,7 @@ export default class AWSSQSSendMessage {
             QueueUrl: queueURL,
             // Any message data we want to send
             MessageBody: message,
-        }).promise();
+        });
     }
 
     async sendMessages(messages: string[], queueURL: string = this.defaultQueueURL): Promise<void> {
@@ -43,7 +44,7 @@ export default class AWSSQSSendMessage {
                     }
                 ),
             ),
-        }).promise();
+        });
     }
 
     public static getInstance(
