@@ -18,7 +18,7 @@ export class AWSSQSSendMessage {
         this.sqsClient = new SQS({
             // The key apiVersion is no longer supported in v3, and can be removed.
             // @deprecated The client uses the "latest" apiVersion.
-            apiVersion: 'latest',
+            // apiVersion: 'latest',
 
             region: this.awsRegion,
         });
