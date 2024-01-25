@@ -1,1 +1,3 @@
-export * from "./aws-sqs-send-message";
+import { AWSSQSSendMessage } from "./aws-sqs-send-message";
+
+export default AWSSQSSendMessage;
