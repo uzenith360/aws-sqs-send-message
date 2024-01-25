@@ -1,6 +1,6 @@
 import { SQS } from '@aws-sdk/client-sqs';
 
-export class AWSSQSSendMessage {
+export default class AWSSQSSendMessage {
     private static _instance: AWSSQSSendMessage;
 
     private readonly sqsClient: SQS;
