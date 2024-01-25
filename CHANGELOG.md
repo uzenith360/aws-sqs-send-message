@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.3.6...v1.3.7) (2024-01-25)
+
+
+### Bug Fixes
+
+* exports ([34a4b2d](https://github.com/uzenith360/aws-sqs-send-message/commit/34a4b2d6224cbd4e2e2205a2b34041879ee31315))
+
 ## [1.3.6](https://github.com/uzenith360/aws-sqs-send-message/compare/v1.3.5...v1.3.6) (2024-01-25)
 
 
